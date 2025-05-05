@@ -1,25 +1,108 @@
-body {
-    font-family: 'Roboto', sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #e8e8e8;
-}
-
-h1, h2, h3 {
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f9f9f9;
     color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 0;
 }
 
-button {
-    background-color: #4caf50;
-    border: none;
-    padding: 10px 20px;
-    color: white;
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header Section */
+.header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Buttons Section */
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 25px;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-button:hover {
-    background-color: #45a049;
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #1e7e34;
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
 }

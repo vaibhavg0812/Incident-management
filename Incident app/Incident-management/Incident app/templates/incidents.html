@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incidents Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+        }
+        .header {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .incident-list {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .incident {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        .incident:last-child {
+            border-bottom: none;
+        }
+        .status {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 3px;
+            color: white;
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Incidents Dashboard</h1>
+    </div>
+    <div class="incident-list">
+        {% for incident in incidents %}
+        <div class="incident">
+            <h3>{{ incident.title }}</h3>
+            <p>{{ incident.description }}</p>
+            <span class="status">{{ incident.status }}</span>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

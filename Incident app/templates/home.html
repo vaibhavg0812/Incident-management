@@ -4,55 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Incident Management System</title>
+    <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-        .header {
-            background-color: #4caf50;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .cta {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 40px;
-        }
-        .cta button {
-            background-color: #4caf50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .cta button:hover {
-            background-color: #45a049;
-        }
-    </style>
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="header">
-        <h1>Welcome to the Incident Management System</h1>
-        <p>Manage and track incidents effortlessly.</p>
-    </div>
     <div class="container">
-        <p>Start managing your incidents by visiting the incidents dashboard or creating a new incident.</p>
-        <div class="cta">
-            <button onclick="location.href='/incidents'">View Incidents</button>
-            <button onclick="location.href='/create_incident'">Create Incident</button>
-        </div>
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Welcome to the Incident Management System</h1>
+            <p>Manage and track incidents effortlessly with modern tools.</p>
+        </header>
+
+        <!-- Main Content Section -->
+        <main class="main-content">
+            <p>Get started by viewing the incidents dashboard or creating a new incident report.</p>
+            <div class="buttons">
+                <a href="/view_incidents" class="btn btn-primary">View Incidents</a>
+                <a href="/create_incident" class="btn btn-secondary">Create Incident</a>
+            </div>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p>&copy; 2025 Incident Management System. Built for efficiency and reliability.</p>
+        </footer>
     </div>
 </body>
 </html>
